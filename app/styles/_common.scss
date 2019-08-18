@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+window{
+    scroll-behavior: smooth;
+}
+html, body{
+    position: relative;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    min-width: 320px;
+    overflow-x: auto;
+    @media(min-width: 320px){
+        overflow-x: hidden;
+    }
+}
+body{
+    max-width: 2880px;
+    min-width: 320px;
+    overflow-x: auto;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Open Sans',  Arial, Helvetica, sans-serif;
+    color: $text;
+    background: $body;
+}
+.content-main{
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.h1{
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0 71px;
+}
+.container{
+    padding: 0 32px;
+    @media(min-width: $tablet){
+        padding: 0 74px;
+    }
+    @media(min-width: $desktop){
+        max-width: 1280px;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__big{
+        @media(min-width: $desktop){
+            max-width: 1650px;
+        }  
+    }
+}

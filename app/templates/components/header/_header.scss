@@ -1,0 +1,55 @@
+.header{
+    background: $header;
+    color: $light;
+    padding: 55px 20px;
+    box-sizing: border-box;
+    margin-bottom: 71px;
+    &-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &-logo{
+        position: absolute;
+    }
+    &-menu{
+        margin-left: 120px;
+        &-ul{
+           display: flex;
+        }
+        &-li{
+            list-style: none;
+            margin-right: 30px;            
+            display: block;
+        }
+        &-link{
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 0 solid;
+            color: $light;
+            transition: border .3s;
+            &:hover, &:active, &:focus{
+                border-bottom: 2px solid;
+            }
+        }
+    }
+    &-phone{
+        &-link{
+            font-size: 30px;
+            border-bottom: none;
+            text-decoration: none;
+            color: $light;
+            transition: border .3s;
+            border-bottom: 0 dotted;
+            &:hover, &:active, &:focus{
+                border-bottom: 2px dotted;
+            }
+        }
+        &-descript{
+            font-size: 20px;
+            margin-top: 5px;
+        }
+    }
+}

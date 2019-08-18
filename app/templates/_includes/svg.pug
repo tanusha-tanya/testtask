@@ -1,0 +1,17 @@
+script.
+  var ajax = new XMLHttpRequest();
+  ajax.open("GET", "images/sprite.svg", true);
+  ajax.send();
+  ajax.onload = function (e) {
+  var div = document.createElement("div");
+  div.style.border = '0';
+  div.style.clip = 'rect(0 0 0 0)';
+  div.style.overflow = 'hidden';
+  div.style.margin = '-1px';
+  div.style.padding = '0';
+  div.style.position = 'absolute';
+  div.style.width = '1px';
+  div.style.height = '1px';
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+  };
